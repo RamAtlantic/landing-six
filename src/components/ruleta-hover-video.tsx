@@ -14,7 +14,7 @@ export function RuletaHoverVideo({ onButtonClick, isLoading, children }: RuletaH
   const [isRuletaHovered, setIsRuletaHovered] = useState(false)
   const [showVideo, setShowVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const handleRuletaMouseEnter = () => {
     setIsRuletaHovered(true)

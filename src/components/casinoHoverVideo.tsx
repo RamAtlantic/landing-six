@@ -14,7 +14,7 @@ export function CasinoHoverVideo({ onRegistration, isLoading, children }: Casino
   const [isCasinoHovered, setIsCasinoHovered] = useState(false)
   const [showVideo, setShowVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const handleCasinoMouseEnter = () => {
     setIsCasinoHovered(true)
