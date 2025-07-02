@@ -66,16 +66,16 @@ export function ContentSectionUpdated() {
   }
 
   return (
-    <div className="bg-black h-[40vh] flex items-start justify-center mt-20 sm:mt-40">
+    <div className="bg-black h-[40vh] flex items-start justify-center mt-20 sm:mt-40 md:mb-20 sm:mb-20">
       <section className="container mx-auto px-3 lg:px-0 py-2">
         <div className="flex flex-col md:flex-row items-center justify-center w-full">
          
 
           {/* Cards Section */}
-          <div className="flex flex-col md:w-2/5 space-y-8">
+          <div className="flex flex-col md:w-2/5 space-y-8 ">
             {/* Enhanced Create User Card with Crystal Glass Effect */}
             <motion.div
-              className="flex bg-black rounded-lg p-2 md:p-8 border border-gray-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-yellow-500 hover:shadow-lg transition-all duration-500 ease-in-out"
+              className="flex bg-black rounded-lg p-2 md:p-8 border border-gray-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-yellow-500 hover:shadow-lg transition-all duration-500 ease-in-out "
               onClick={handleRegistration}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
