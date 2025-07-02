@@ -268,7 +268,7 @@ const AppContent = () => {
               {/* Content */}
               <div className="relative z-10">
                 <motion.h3
-                  className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent mb-3 lg:mb-4 font-chango text-center group-hover:text-black"
+                  className="text-2xl lg:text-6xl font-bold title-chango bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent mb-3 lg:mb-4 text-center group-hover:text-black"
                   whileHover={{
                     textShadow: "0 0 25px rgba(59, 130, 246, 0.7)",
                     scale: 1.1,
