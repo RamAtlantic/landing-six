@@ -229,11 +229,12 @@ const AppContent = () => {
             </button>
           </div>
         </motion.nav>
+        <ContentSectionUpdated />
 
-        <main className="relative z-10 md:pt-40 flex flex-col md:flex-row items-center justify-center ">
+        <main className="relative z-10 flex flex-col md:flex-row items-center justify-center mb-20">
           {/* Why Join? Section - Cards with responsive behavior */}
 
-          <div className="flex flex-col items-center space-y-4 mt-20">
+          <div className="flex flex-col items-center space-y-4">
             <img src="imageLogo.png" alt="" className="w-[150px] ml-3 h-auto z-20" />
             <video
               src="/output1.mp4"
@@ -249,8 +250,76 @@ const AppContent = () => {
        
           {/* NEW SECTION */}
         </main>
-        <ContentSectionUpdated />
 
+        <div className="flex flex-col items-center justify-center">
+           {/* Promotional Code Card with Disruptive Design */}
+           <motion.div
+              className="flex bg-blue-900 bg-opacity-50 rounded-lg p-4 md:p-8 border border-red-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-red-500 hover:shadow-xl transition-all duration-500 ease-in-out"
+              onClick={() => alert('Código promocional: PROMO250K')}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FaGift className="text-3xl mb-4 text-red-400" />
+              {/* Animated Background */}
+              <div className="absolute inset-0 opacity-30">
+                <div className="bg-gradient-to-r from-blue-500 to-red-500 w-full h-full animate-pulse"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <motion.h3
+                  className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent mb-3 lg:mb-4 font-chango text-center group-hover:text-black"
+                  whileHover={{
+                    textShadow: "0 0 25px rgba(59, 130, 246, 0.7)",
+                    scale: 1.1,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  OBTÉN TU CÓDIGO
+                </motion.h3>
+
+                <motion.p
+                  className="text-xl lg:text-2xl text-white leading-tight text-center group-hover:text-blue-100 transition-colors duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Y GANA UN DESCUENTO DE HASTA{" "}
+                  <motion.span
+                    className="font-bold bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent"
+                    whileHover={{
+                      textShadow: "0 0 20px rgba(239, 68, 68, 0.7)",
+                      scale: 1.15,
+                    }}
+                  >
+                    $250.000
+                  </motion.span>
+                </motion.p>
+              </div>
+
+              {/* Floating Particles Effect */}
+              <div className="absolute inset-0 pointer-events-none">
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-red-400 rounded-full opacity-0 group-hover:opacity-70"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                    }}
+                    animate={{
+                      y: [-15, -35, -15],
+                      opacity: [0, 0.7, 0],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Number.POSITIVE_INFINITY,
+                      delay: i * 0.4,
+                    }}
+                  />
+                ))}
+              </div>
+            </motion.div>
+        </div>
+      
         {/* NEW SECTION CARROUSEL */}
         {/*   <section className="hidden md:block w-full mt-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black h-1/4 pointer-events-none"></div>
