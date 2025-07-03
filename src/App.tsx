@@ -231,7 +231,7 @@ const AppContent = () => {
         </motion.nav>
         <ContentSectionUpdated />
 
-        <main className="relative z-10 flex flex-col md:flex-row items-center justify-center mb-20">
+        <main className="relative z-10 flex flex-col mt-10 md:flex-row items-center justify-center mb-20">
           {/* Why Join? Section - Cards with responsive behavior */}
 
           <div className="flex flex-col items-center space-y-4">
