@@ -72,10 +72,10 @@ export function ContentSectionUpdated() {
       <section className="container mx-auto px-3 lg:px-0 py-2">
         <div className="flex flex-col md:flex-row items-center justify-center w-full">
           {/* Cards Section */}
-          <div className="flex flex-col md:w-2/5 space-y-8 ">
+          <div className="flex flex-col md:w-2/5 space-y-8">
             {/* Enhanced Create User Card with Crystal Glass Effect */}
             <motion.div
-              className="flex bg-black rounded-lg p-2 md:p-8 border border-gray-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-yellow-500 hover:shadow-lg transition-all duration-500 ease-in-out "
+              className="flex bg-black rounded-lg p-2 md:p-8 border border-gray-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-yellow-500 hover:shadow-lg transition-all duration-500 ease-in-out pulse"
               onClick={handleRegistration}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
@@ -198,6 +198,25 @@ export function ContentSectionUpdated() {
 
         .loader-circle {
           border-top-color: transparent;
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.5);
+            background: linear-gradient(to right, rgba(250, 204, 21, 0.5), rgba(34, 197, 94, 0.5));
+            transition: background 0.5s ease-in-out;
+          }
+          50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px 10px rgba(250, 204, 21, 0);
+            background: linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(34, 197, 94, 0.7));
+            transition: background 0.5s ease-in-out;
+          }
+        }
+
+        .pulse {
+          animation: pulse 2s infinite;
         }
       `}</style>
     </div>
