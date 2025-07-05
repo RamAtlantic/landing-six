@@ -221,6 +221,7 @@ const AppContent = () => {
           </motion.div>
           <div className="flex items-center space-x-4 md:space-x-8 py-2">
             <button
+              id='cta-button'
               onClick={handleRegistration}
               className="text-sm text-white md:text-xl px-4 py-2 md:px-8 md:py-3 bg-gradient-to-r from-green-500 to-amber-600 rounded-full hover:from-amber-600 hover:to-amber-700 transition-all duration-300 flex items-center"
             >
