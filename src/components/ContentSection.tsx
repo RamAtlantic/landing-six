@@ -67,7 +67,8 @@ export function ContentSectionUpdated() {
           {/* Cards Section */}
           <div className="flex flex-col md:w-2/5 space-y-8">
             {/* Enhanced Create User Card with Crystal Glass Effect - Desktop */}
-            <motion.div
+            <motion.button
+              id="cta-button-desktop"
               className="flex bg-black rounded-lg p-2 md:p-8 border border-gray-700 items-center justify-center flex-col relative overflow-hidden cursor-pointer group hover:border-yellow-500 hover:shadow-lg transition-all duration-500 ease-in-out pulse hidden md:flex"
               onClick={handleRegistration}
               whileHover={{ scale: 1.02 }}
@@ -109,9 +110,7 @@ export function ContentSectionUpdated() {
                     whileHover={{ scale: 1.02 }}
                   >
                     Y RECIBÍ RECOMPENSAS DE DEPÓSITO DE HASTA{" "}
-                  
                   </motion.p>
-                  
                 )}
               </div>
 
@@ -137,7 +136,7 @@ export function ContentSectionUpdated() {
                   />
                 ))}
               </div>
-            </motion.div>
+            </motion.button>
 
             {/* Enhanced Mobile Button */}
             <motion.div
@@ -165,8 +164,34 @@ export function ContentSectionUpdated() {
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/30 to-yellow-400/25 rounded-full blur-xl transform translate-y-1"></div>
               </motion.div>
 
-              <motion.button
-                className="relative w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-black font-bold py-2 px-8 rounded-full overflow-hidden group active:scale-95 transition-all duration-200 min-h-[120px] flex flex-col items-center justify-center transform hover:translate-y-[-2px]"
+
+              {/* Mobile Description */}
+              {!isLoading && (
+                  <div>
+                <motion.div
+                  className="mt-4 text-center px-2 mt-10"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <p className="text-sm text-white leading-tight mb-4">
+                    Y RECIBÍ RECOMPENSAS DE DEPÓSITO DE HASTA{" "}
+                  </p>
+                  <span className="font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent title-chango text-base text-[25px]">
+                      $100.000 ARS
+                    </span>
+                </motion.div>
+                </div>
+              )}
+            </motion.div>
+
+            <motion.p className="text-lg md:text-xl lg:text-4xl text-white text-center mt-4">
+          plataforma directa, <span className="font-bold">sin intermediarios</span>
+        </motion.p>
+
+            <motion.button
+                id="cta-button"
+                className="relative w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-black font-bold py-2 px-8 rounded-full overflow-hidden group active:scale-95 transition-all duration-200 min-h-[120px] flex flex-col items-center justify-center transform hover:translate-y-[-2px] lg:hidden"
                 onClick={handleRegistration}
                 disabled={isLoading}
                 whileTap={{ scale: 0.95 }}
@@ -216,33 +241,10 @@ export function ContentSectionUpdated() {
                 {/* Inner Glow Effect */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-yellow-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
               </motion.button>
-
-              {/* Mobile Description */}
-              {!isLoading && (
-                  <div>
-                <motion.div
-                  className="mt-4 text-center px-2 mt-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <p className="text-sm text-white leading-tight mb-4">
-                    Y RECIBÍ RECOMPENSAS DE DEPÓSITO DE HASTA{" "}
-                   
-                  </p>
-                  <span className="font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent title-chango text-base text-[25px]">
-                      $100.000 ARS
-                    </span>
-                </motion.div>
-                </div>
-              )}
-            </motion.div>
           </div>
         </div>
 
-        <motion.p className="text-lg md:text-xl lg:text-4xl text-white text-center mt-4">
-          plataforma directa, <span className="font-bold">sin intermediarios</span>
-        </motion.p>
+        
       </section>
 
       <style>{`

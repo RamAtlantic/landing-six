@@ -235,7 +235,7 @@ const AppContent = () => {
         <main className="relative z-10 flex flex-col mt-10 md:flex-row items-center justify-center mb-20">
           {/* Why Join? Section - Cards with responsive behavior */}
 
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col items-center space-y-4 mt-36">
             <img src="imageLogo.png" alt="" className="w-[150px] ml-3 h-auto z-20" />
             <video
               src="/output1.mp4"
