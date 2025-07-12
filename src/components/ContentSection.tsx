@@ -189,14 +189,12 @@ export function ContentSectionUpdated() {
           plataforma directa, <span className="font-bold">sin intermediarios</span>
         </motion.p>
 
-            <motion.button
+            <button
                 id="cta-button"
                 className="relative w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-black font-bold py-2 px-8 rounded-full overflow-hidden group active:scale-95 transition-all duration-200 min-h-[120px] flex flex-col items-center justify-center transform hover:translate-y-[-2px] lg:hidden"
                 onClick={handleRegistration}
                 disabled={isLoading}
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
+               
               >
                 {/* Animated Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-yellow-400/20 opacity-0 group-active:opacity-100 transition-opacity duration-200"></div>
@@ -240,7 +238,7 @@ export function ContentSectionUpdated() {
 
                 {/* Inner Glow Effect */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-yellow-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
-              </motion.button>
+              </button>
           </div>
         </div>
 
