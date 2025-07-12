@@ -190,11 +190,10 @@ export function ContentSectionUpdated() {
         </motion.p>
 
             <button
-                id="cta-button"
-                className="relative w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-black font-bold py-2 px-8 rounded-full overflow-hidden group active:scale-95 transition-all duration-200 min-h-[120px] flex flex-col items-center justify-center transform hover:translate-y-[-2px] lg:hidden"
+                id="cta-button-mobile"
+                className="relative w-full bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 text-black font-bold py-2 px-8 rounded-full overflow-hidden group active:scale-95 transition-all duration-200 min-h-[120px] flex flex-col items-center justify-center transform hover:translate-y-[-2px] md:hidden"
                 onClick={handleRegistration}
                 disabled={isLoading}
-               
               >
                 {/* Animated Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-yellow-400/20 opacity-0 group-active:opacity-100 transition-opacity duration-200"></div>
@@ -231,7 +230,6 @@ export function ContentSectionUpdated() {
                         CREAR USUARIO
                       </motion.span>
                       <FaUserPlus className="text-2xl ml-1 text-black" />
-                      
                     </div>
                   )}
                 </div>

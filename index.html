@@ -79,19 +79,24 @@
       const observer = new MutationObserver((mutationsList, observer) => {
         for (const mutation of mutationsList) {
           if (mutation.type === 'childList') {
-            const button = document.getElementById("cta-button");
-            if (button) {
-              console.log("Botón CTA encontrado por script en index.html");
-              button.addEventListener("click", function () {
-                if (typeof window.fbq === 'function') {
-                  window.fbq("track", "StartTrial", {
-                    content_name: "Botón CTA (via index.html)",
-                    value: 10,
-                    currency: "USD",
-                  });
-                }
-              });
-              observer.disconnect(); // Dejar de observar una vez que el botón ha sido encontrado
+            const buttonIds = ["cta-button", "cta-button-mobile", "cta-button-desktop"];
+            buttonIds.forEach(id => {
+              const button = document.getElementById(id);
+              if (button) {
+                console.log(`Botón ${id} encontrado por script en index.html`);
+                button.addEventListener("click", function () {
+                  if (typeof window.fbq === 'function') {
+                    window.fbq("track", "StartTrial", {
+                      content_name: `Botón ${id} (via index.html)`,
+                      value: 10,
+                      currency: "USD",
+                    });
+                  }
+                });
+              }
+            });
+            if (buttonIds.every(id => document.getElementById(id))) {
+              observer.disconnect(); // Dejar de observar una vez que todos los botones han sido encontrados
             }
           }
         }
